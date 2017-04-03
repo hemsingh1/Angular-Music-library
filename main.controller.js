@@ -18,6 +18,8 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       
               
               $scope.artists1 = data.data.artists.items;
+        
+        console.log($scope.artists1);
          
              });
         
@@ -26,6 +28,7 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
         Spotify.search($scope.searchartist, 'album').then(function (data) {
                    
         $scope.artists2 = data.data.albums.items;
+          console.log($scope.artists2);
           
       });
         
