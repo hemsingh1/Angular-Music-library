@@ -10,6 +10,9 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
   app.controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
 
     $scope.searchArtist = function () {
+      
+      $scope.ab = $scope.searchartist;
+      alert($scope.ab);
       Spotify.search($scope.searchartist, 'artist').then(function (data) {
         
       console.log('=================== Search results ===================');
