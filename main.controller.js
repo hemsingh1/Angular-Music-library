@@ -1,7 +1,6 @@
+var app = angular.module('musicApp', ['spotify']);
 
-angular
-  .module('musicApp', ['spotify'])
-  .config(function (SpotifyProvider) {
+  app.config(function (SpotifyProvider) {
     SpotifyProvider.setClientId('c9ba2fa643a14871b1facf69e9ac8672');
     
     SpotifyProvider.setClientSecret('c9ba2fa643a14871b1facf69e9ac8672');
