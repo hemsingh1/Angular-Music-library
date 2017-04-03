@@ -13,7 +13,7 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       
       $scope.ab = $scope.searchartist;
      // alert($scope.ab); 
-      var options ={limit:10};
+      var options ={limit:2};
       
       Spotify.search($scope.searchartist, 'artist', options).then(function (data) {
         
@@ -37,7 +37,7 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       var ar = [];
         
     
-     $scope.artists = angular.extend(ar,$scope.artists1, $scope.artists2);
+     $scope.artists = angular.extend($scope.artists1, $scope.artists2);
       
        console.log('ll', $scope.artists);
       
