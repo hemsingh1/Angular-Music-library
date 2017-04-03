@@ -3,7 +3,6 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
   app.config(function (SpotifyProvider) {
     SpotifyProvider.setClientId('c9ba2fa643a14871b1facf69e9ac8672');
     
-    SpotifyProvider.setClientSecret('c9ba2fa643a14871b1facf69e9ac8672');
     SpotifyProvider.setRedirectUri('https://hemsingh1.github.io/Angular-Music-library/callback.html');
     SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
   })
