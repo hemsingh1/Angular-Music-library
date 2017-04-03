@@ -19,7 +19,7 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
               $scope.artists = data.data.artists.items;
           }else{
           
-         Spotify.search($scope.searchartist, 'albums').then(function (data) {
+         Spotify.search($scope.searchartist, 'album').then(function (data) {
             $scope.artists1 = data.data.albums.items.length;
         $scope.artists = data.data.albums.items;
       });
