@@ -14,13 +14,20 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       $scope.ab = $scope.searchartist;
      // alert($scope.ab);
       Spotify.search($scope.searchartist, 'artist').then(function (data) {
+          $scope.artists1 = data.data.artists.items.length;
+       if($scope.artists1 > 0){
+              $scope.artists = data.data.artists.items;
+          }else{
+          
+         Spotify.search($scope.searchartist, 'albums').then(function (data) {
+            $scope.artists1 = data.data.albums.items.length;
+        $scope.artists = data.data.albums.items;
+      });
+          
+          }
         
-      console.log('=================== Search results ===================');
-         console.log(data.data.artists);
         
-      console.log('=================== Search length ===================');
-         console.log(data.data.artists.items.length);
-        $scope.artists = data.data.artists.items;
+        
       });
     };
 
