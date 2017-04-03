@@ -5,11 +5,15 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
     
     SpotifyProvider.setRedirectUri('https://hemsingh1.github.io/Angular-Music-library/callback.html');
     SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
+    
   })
   app.controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
 
     $scope.searchArtist = function () {
       Spotify.search($scope.searchartist, 'artist').then(function (data) {
+        
+      console.log('=================== Search results ===================');
+         console.log(data);
         $scope.artists = data.artists.items;
       });
     };
