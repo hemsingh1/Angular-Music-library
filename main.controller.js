@@ -7,7 +7,7 @@ var app = angular.module('musicApp', ['spotify']);
     SpotifyProvider.setRedirectUri('https://hemsingh1.github.io/Angular-Music-library/callback.html');
     SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
   })
-  .controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
+  app.controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
 
     $scope.searchArtist = function () {
       Spotify.search($scope.searchartist, 'artist').then(function (data) {
