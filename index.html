@@ -23,9 +23,9 @@
   </style>
 </head>
 <body ng-controller="MainController">
-	<button ng-click="login()">Login with Spotify</button>
 
-  <input type="text" ng-model="searchartist" ng-change="searchArtist()" placeholder="Search for an artist">
+  <input type="text" ng-model="searchartist" placeholder="Search for an artist"> 
+	<button ng-click="searchArtist()">Search</button>
   <ul>
     <li ng-repeat="artist in artists">
       <a class="media" ng-href="{{artist.external_urls.spotify}}" target="_blank">
