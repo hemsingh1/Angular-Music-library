@@ -1,4 +1,4 @@
-var app = angular.module('musicApp', ['spotify']);
+var app = angular.module('musicApp', ['ngRoute','spotify']);
 
   app.config(function (SpotifyProvider) {
     SpotifyProvider.setClientId('c9ba2fa643a14871b1facf69e9ac8672');
