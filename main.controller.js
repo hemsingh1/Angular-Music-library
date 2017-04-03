@@ -10,11 +10,11 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
   app.controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
 
     $scope.searchArtist = function () {
-      Spotify.search('Nirvana', 'artist').then(function (data) {
+      Spotify.search($scope.searchartist, 'artist').then(function (data) {
         
       console.log('=================== Search results ===================');
-         console.log(data);
-        $scope.artists = data.artists;
+         console.log(data.artists.href);
+        $scope.artists = data.artists.items[];
       });
     };
 
