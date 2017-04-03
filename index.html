@@ -1,10 +1,44 @@
-<html ng-app>
+<html ng-app="musicApp">
 <head>
 	<title>Music Library based on Angular JS</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	 <style>
+    ul {
+      list-style: none;
+    }
+    .media {
+      display: table;
+      width: 100%;
+    }
+    .media img {
+      display: table-cell;
+      max-width: 100%;
+    }
+    .media-details {
+      padding-left: 1em;
+      vertical-align: middle;
+      display: table-cell;
+      width: 90%;
+    }
+  </style>
 </head>
-<body>
-	<p>This is a test app for angular. Enjoy!!!</p>
+<body ng-controller="MainController">
+	<button ng-click="login()">Login with Spotify</button>
 
+  <input type="text" ng-model="searchartist" ng-change="searchArtist()" placeholder="Search for an artist">
+  <ul>
+    <li ng-repeat="artist in artists">
+      <a class="media" ng-href="{{artist.external_urls.spotify}}" target="_blank">
+        <img ng-src="{{artist.images[0].url}}" alt="">
+        <div class="media-details">
+          {{artist.name}}
+        </div>
+      </a>
+    </li>
+  </ul>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="angular-spotify.js"></script>
+  <script src="main.controller.js"></script>
 </body>
 </html>
