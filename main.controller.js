@@ -27,26 +27,12 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       })
     };
 
-    // Gets an album
-    Spotify.getAlbum('0sNOF9WDwhWunNAHPD3Baj').then(function (data){
-      console.log('=================== Album - ID ===================');
-      console.log(data);
-    });
-    // Works with Spotify uri too
-    Spotify.getAlbum('spotify:album:0sNOF9WDwhWunNAHPD3Baj').then(function (data){
-      console.log('=================== Album - Spotify URI ===================');
-      console.log(data);
-    });
-
-    //Get multiple Albums
-    Spotify.getAlbums('41MnTivkwTO3UUJ8DrqEJJ,6JWc4iAiJ9FjyK0B59ABb4,6UXCm6bOO4gFlDQZV5yL37').then(function (data) {
-      console.log('=================== Albums - Ids ===================');
-      console.log(data);
-    });
-    Spotify.getAlbums(['41MnTivkwTO3UUJ8DrqEJJ','6JWc4iAiJ9FjyK0B59ABb4','6UXCm6bOO4gFlDQZV5yL37']).then(function (data) {
-      console.log('=================== Albums - Array ===================');
-      console.log(data);
-    });
+    // search an album
+   Spotify.search('Nirvana', 'artist').then(function (data) {
+    
+      console.log('=================== search results ===================');
+  console.log(data);
+});
 
 
     Spotify.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ').then(function (data) {
