@@ -30,7 +30,7 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       });
         
     
-     $scope.artists = angular.merge($scope.artists1,$scope.artists2) ;
+     $scope.artists = angular.merge($scope.artists2,$scope.artists1) ;
       
        
       
