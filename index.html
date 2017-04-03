@@ -12,7 +12,7 @@
 	
 <section class="container">
   <ul>
-    <li ng-repeat="artist in artists">
+    <li ng-repeat="artist in artists | orderBy:'-name'">
       <a class="media" ng-href="{{artist.external_urls.spotify}}" target="_blank">
         <img ng-src="{{artist.images[0].url}}" alt="">
         <div class="media-details">
