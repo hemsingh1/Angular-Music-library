@@ -13,7 +13,7 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       Spotify.search('Nirvana', 'artist').then(function (data) {
         
       console.log('=================== Search results ===================');
-         console.log($scope.searchartist);
+         console.log(data);
         $scope.artists = data.artists.items;
       });
     };
