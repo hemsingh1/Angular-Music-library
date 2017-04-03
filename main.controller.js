@@ -31,7 +31,9 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
         
       $scope.artists = {};
       
-      angular.extend($scope.artists, $scope.artists1,  $scope.artists2)
+      angular.extend($scope.artists, $scope.artists1,  $scope.artists2);
+      
+      console.log($scope.artists);
      
       
        
