@@ -17,7 +17,9 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
         
       console.log('=================== Search results ===================');
          console.log(data.data.artists);
-        alert(data.data.artists.items.length);
+        
+      console.log('=================== Search length ===================');
+         console.log(data.data.artists.items.length);
         $scope.artists = data.data.artists.items;
       });
     };
