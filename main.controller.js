@@ -17,11 +17,11 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       
       var arr = [];
       
-      Spotify.search($scope.searchartist, 'track', options).then(function (data) {
+      Spotify.search($scope.searchartist, 'artist', options).then(function (data) {
         
       
               
-              $scope.artists = data.data.tracks.items;
+              $scope.artists = data.data.artists.items;
         
         
         console.log(data);
