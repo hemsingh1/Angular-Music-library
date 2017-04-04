@@ -13,7 +13,7 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       
       $scope.ab = $scope.searchartist;
      // alert($scope.ab); 
-      var options ={limit:2};
+      var options ={limit:9};
       
       var arr = [];
       
