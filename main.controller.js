@@ -24,7 +24,7 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
               $scope.artists = data.data.tracks.items;
         
         
-        console.log($scope.artists);
+        console.log(data);
          
              });
         
