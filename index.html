@@ -20,7 +20,10 @@
         </div>
       </a>
     </li>
-	   <li ng-repeat="artist in artists2 | orderBy:'+name'">
+  </ul>
+	<ul>
+	
+	<li ng-repeat="artist in artists2 | orderBy:'+name'">
       <a class="media" ng-href="{{artist.external_urls.spotify}}" target="_blank">
         <img ng-src="{{artist.images[0].url}}" alt="">
         <div class="media-details">
@@ -28,8 +31,10 @@
         </div>
       </a>
     </li>
-	 
-  </ul>
+	
+	</ul>
+	
+	
 	</section>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
