@@ -21,7 +21,7 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
         
       
               
-              $scope.artists = data.data.artists.items;
+              $scope.artists1 = data.data.artists.items;
         
         
         console.log(data);
