@@ -27,6 +27,17 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
         console.log(data);
          
              });
+      
+        Spotify.search($scope.searchartist, 'album', options).then(function (data) {
+        
+      
+              
+              $scope.artists2 = data.data.albums.items;
+        
+        
+        console.log(data);
+         
+});
         
           
          
