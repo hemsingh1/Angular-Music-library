@@ -13,31 +13,24 @@ var app = angular.module('musicApp', ['ngRoute','spotify']);
       
       $scope.ab = $scope.searchartist;
      // alert($scope.ab); 
-      var options ={limit:9};
+      var options ={limit:40};
       
       var arr = [];
       
-      Spotify.search($scope.searchartist, 'artist', options).then(function (data) {
+      Spotify.search($scope.searchartist, 'track', options).then(function (data) {
         
       
               
-              $scope.artists1 = data.data.artists.items;
-        arr =  data.data.artists.items;
+              $scope.artists = data.data.tracks.items;
         
-        console.log(1, arr);
+        
+        console.log($scope.artists);
          
              });
         
           
          
-        Spotify.search($scope.searchartist, 'album', options).then(function (data) {
-                   
-        $scope.artists2 = data.data.albums.items;
-          
-          var c = arr.concat(data.data.albums.items);
-          console.log('all',c);
-          
-      });
+   
       
       
       
